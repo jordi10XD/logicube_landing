@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logicube | Software Factory & Asesoría TI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- PRELOAD HERO LOGO PARA EVITAR DEMORAS -->
+    <link rel="preload" as="image" href="isotipo.webp" fetchpriority="high">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PRELOADER & PROGRESS -->
+    <div id="preloader">
+        <div class="loader-logo">LOGICUBE   </div>
+    </div>
+    <div id="scroll-progress"></div>
+
+    
+    <!-- CUSTOM CURSOR (Hidden on mobile via CSS/JS) -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+        <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand d-flex align-items-center" href="#" style="padding: 0;">
+                <video id="scrollVideo" src="videomain.webm" muted playsinline preload="auto" height="110" style="border-radius: 4px; pointer-events: none; mix-blend-mode: screen; transform: scale(1.1); transform-origin: left center;"></video>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navLogicube">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navLogicube">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#servicios">SERVICIOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#adn">ADN</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link cta-pulse ms-lg-4" href="#" data-bs-toggle="modal" data-bs-target="#whatsappModal">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="heroSection" class="hero-portal">
+        <div class="hero-overlay"></div>
+        <div class="container h-100 d-flex flex-column align-items-center justify-content-center text-center">
+            <div class="hero-content position-relative z-index-10 w-100">
+                
+                <div class="hero-isotipo-wrapper mx-auto mb-4" style="will-change: transform;">
+                    <img src="isotipo.webp" alt="Logicube" class="hero-isotipo d-block mx-auto" fetchpriority="high" decoding="async">
+                </div>
+                <p class="hero-subtitle mb-5 mt-3 text-white">Transformamos ideas complejas en soluciones digitales de alto impacto mediante código limpio, inteligencia artificial y ciberseguridad.</p>
+                
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="#nosotros" class="btn btn-logicube btn-lg px-5 py-3 fw-bold">CONOCE MÁS</a>
+                    <a href="#servicios" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold btn-glass">SERVICIOS</a>
+                </div>
+            </div>
+            
+            <!-- Indicador de Scroll -->
+            <a href="#servicios" class="scroll-indicator">
+                <i class="fas fa-angle-down fa-2x"></i>
+            </a>
+            </div>
+    </header>
+
+    <section id="servicios" class="bg-dark-section">
+        <div class="container">
+            <div class="text-center mb-5 pb-4" data-aos="fade-up">
+                <h2 class="section-title text-white">Nuestros Servicios</h2>
+                <div class="accent-bar mx-auto"></div>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-3d py-5 px-4 text-center h-100" data-tilt>
+                        <div class="fs-1 mb-4 icon-visual"><i class="bi bi-pc-display text-orange"></i></div>
+                        <h3 class="text-white h4 mb-3">Desarrollo Web & Apps</h3>
+                        <p class="text-white">Aplicaciones web, móviles y de escritorio escalables centradas en el usuario.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-3d py-5 px-4 text-center h-100" data-tilt>
+                        <div class="fs-1 mb-4 icon-visual"><i class="bi bi-shield-check text-orange"></i></div>
+                        <h3 class="text-white h4 mb-3">Auditoría & Seguridad</h3>
+                        <p class="text-white">Servicios avanzados de auditoría y ciberseguridad para tu infraestructura.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card-3d py-5 px-4 text-center h-100" data-tilt>
+                        <div class="fs-1 mb-4 icon-visual"><i class="bi bi-robot text-orange"></i></div>
+                        <h3 class="text-white h4 mb-3">Inteligencia Artificial</h3>
+                        <p class="text-white">Desarrollo de agentes de IA para simplificar y optimizar procesos complejos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="about-section position-relative">
+        <div class="glow-blob blob-blue"></div>
+        <div class="glow-blob blob-orange"></div>
+        
+        <div class="container position-relative z-index-10">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <h2 class="section-title text-white mb-4">¿Quiénes <span class="text-gradient">Somos?</span></h2>
+                    <p class="text-white mb-4" style="text-align: justify; font-size: 1.1rem;">
+                        En <strong>Logicube</strong>, somos una software factory integral donde la tecnología y la estrategia convergen. No solo construimos herramientas; transformamos ideas complejas en ecosistemas digitales diseñados para posicionar tu marca en el mercado actual.
+                    </p>
+                    <p class="text-white mb-5" style="text-align: justify;">
+                        Combinamos el desarrollo técnico de alto nivel con una visión comercial que garantiza que cada línea de código contribuya al alcance y la autoridad de tu negocio en el entorno digital.
+                    </p>
+
+                    <div class="neon-card p-4 rounded-4" data-tilt data-tilt-max="5">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-rocket-takeoff fs-3 me-3 text-orange"></i>
+                            <h4 class="text-white fw-bold m-0">Nuestra Promesa</h4>
+                        </div>
+                        <p class="text-white small m-0" style="text-align: justify;">
+                            Transformar la complejidad en soluciones claras, funcionales y escalables. Somos tu aliado estratégico para crear productos digitales de alto impacto con total transparencia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+                    <div class="target-card p-5 rounded-4">
+                        <div class="target-icon-wrap mb-4">
+                            <i class="bi bi-bullseye fs-1 text-orange"></i>
+                        </div>
+                        <h3 class="text-white mb-4">¿A quiénes ayudamos?</h3>
+                        <div class="text-white mb-4" style="text-align: justify;">
+                            <p class="mb-3"><span class="text-orange fw-bold">Empresas y Startups:</span> Que buscan no solo una web, sino una identidad digital sólida que genere confianza y convierta visitantes en clientes.</p>
+                            <p class="mb-3"><span class="text-orange fw-bold">Emprendedores:</span> Que necesitan escalar su visión con una infraestructura técnica robusta y una presencia online que destaque frente a la competencia.</p>
+                            <p class="mb-2 mt-4 text-white fw-bold">Nuestras soluciones incluyen:</p>
+                        </div>
+                        <ul class="custom-list text-white mb-4">
+                            <li><strong>Desarrollo Full-Stack (UX-Driven):</strong> Web, Móvil y Desktop con diseño centrado en el usuario, construyendo marca desde la fluidez y facilidad de uso.</li>
+                            <li><strong>Identidad y Autoridad de Marca:</strong> Diseño de interfaces que proyectan profesionalismo y coherencia visual en cada pixel.</li>
+                            <li><strong>Estrategia de Alcance Digital:</strong> Optimización SEO y arquitecturas web que maximizan el impacto comercial.</li>
+                            <li><strong>IA y Ciberseguridad:</strong> Tecnología de vanguardia para automatizar procesos y proteger tu activo más valioso: los datos.</li>
+                        </ul>
+                        <div class="target-footer p-4 rounded-3 mt-4">
+                            <p class="m-0 text-white small fw-bold" style="line-height: 1.5;">Ayudamos a que tu negocio deje de ser local para volverse global a través de arquitecturas web optimizadas para el alcance masivo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impacto" class="impact-section">
+        <div class="container">
+            <div class="text-center mb-5 pb-4" data-aos="fade-up">
+                <h2 class="section-title text-white">Impacto <span class="text-gradient">360°</span></h2>
+                <div class="accent-bar mx-auto"></div>
+                <p class="text-white mt-4 mx-auto" style="max-width: 800px; font-size: 1.1rem; line-height: 1.7;">
+                    Más allá del código: <strong>Potenciamos tu presencia.</strong><br>
+                    Un sitio web es solo el inicio. Para que tu negocio trascienda, trabajamos en los pilares que impulsan tu éxito absoluto:
+                </p>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="target-card p-4 rounded-4 text-center h-100" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="fs-1 mb-3"><i class="bi bi-palette text-orange"></i></div>
+                        <h4 class="text-white mb-3">Branding Digital</h4>
+                        <p class="text-white small" style="text-align: justify; line-height: 1.6;">Creamos una imagen visual que enamora a tu audiencia, comunicando autoridad en cada interacción.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="target-card p-4 rounded-4 text-center h-100" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="fs-1 mb-3"><i class="bi bi-graph-up-arrow text-orange"></i></div>
+                        <h4 class="text-white mb-3">Optimización de Conversión</h4>
+                        <p class="text-white small" style="text-align: justify; line-height: 1.6;">Diseñamos cada flujo para que tu sitio sea una herramienta de ventas 24/7 y no solo un catálogo digital.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="target-card p-4 rounded-4 text-center h-100" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="fs-1 mb-3"><i class="bi bi-hdd-network text-orange"></i></div>
+                        <h4 class="text-white mb-3">Escalabilidad y Alcance</h4>
+                        <p class="text-white small" style="text-align: justify; line-height: 1.6;">Preparamos tu plataforma para crecer al ritmo de tus usuarios e ingresos, asegurando que siempre estés un paso adelante de la competencia tecnológica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="adn" class="philosophy-section philosophy-fade d-flex align-items-center">
+        <div class="container position-relative z-index-10">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title text-white">Nuestro <span class="text-gradient">ADN</span></h2>
+                <div class="accent-bar mx-auto"></div>
+            </div>
+            <div class="row g-5 justify-content-center">
+                <div class="col-md-5" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="holo-card p-5 h-100" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                        <h3 class="text-white mb-4 fs-2">Misión <span class="fs-4 text-orange">01</span></h3>
+                        <p class="text-white" style="text-align: justify; line-height: 1.8;">
+                            Transformar ideas complejas en soluciones digitales de alto impacto a través de código limpio, escalable y centrado en el usuario. Nos dedicamos a construir el motor tecnológico que permite evolucionar en un mundo digital constante.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="holo-card p-5 h-100" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                        <h3 class="text-white mb-4 fs-2">Visión <span class="fs-4 text-orange">02</span></h3>
+                        <p class="text-white" style="text-align: justify; line-height: 1.8;">
+                            Convertirnos en el aliado tecnológico referente para startups y empresas en crecimiento, reconocidos por nuestra capacidad de innovar y por crear productos que definan el estándar de calidad en la industria del software.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-logicube py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4 text-center text-md-start">
+                    <img src="logo_logicube.png" alt="Logicube" height="40" class="mb-2">
+                    <p class="text-white small m-0">Software Factory & Asesoría TI.<br>Simplificamos lo complejo.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h6 class="text-white fw-bold mb-3">Síguenos</h6>
+                    <div class="social-links d-flex justify-content-center gap-3 mb-3">
+                        <a href="https://wa.me/593995210883" class="social-icon whatsapp" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="mailto:administrativo@grupologicube.com" class="social-icon email" title="Correo"><i class="bi bi-envelope-fill"></i></a>
+                        <a href="https://instagram.com/logicube_solutions" class="social-icon instagram" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://tiktok.com/@logicube_solutions" class="social-icon tiktok" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                    <ul class="list-unstyled d-flex justify-content-center gap-3 m-0">
+                        <li><a href="#servicios" class="footer-link">Servicios</a></li>
+                        <li><a href="#nosotros" class="footer-link">Nosotros</a></li>
+                        <li><a href="#adn" class="footer-link">ADN</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <p class="text-white small m-0">&copy; 2026 Logicube. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="whatsappModal" tabindex="-1" aria-labelledby="whatsappModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-modal">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center pt-0 pb-5 px-4">
+                    <div class="mb-3"><i class="bi bi-chat-dots fs-1 text-orange"></i></div>
+                    <h3 class="text-white fw-bold mb-3">¿Quieres chatear para conocernos?</h3>
+                    <p class="text-white mb-4">Escríbenos directamente por WhatsApp y cuéntanos sobre tus ideas. Estamos listos para ayudarte a escalar tu negocio.</p>
+                    <a href="https://wa.me/593995210883" target="_blank" class="btn btn-whatsapp btn-lg px-4 py-3 fw-bold w-100">
+                        <i class="bi bi-whatsapp me-2"></i> Ir a WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        
+        // --- MOBILE CHECK ---
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+
+        // --- PRELOADER ---
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => { preloader.style.display = 'none'; }, 600);
+        });
+
+        // --- SCROLL PROGRESS & PARALLAX (OPTIMIZADO) ---
+        let isScrolling = false;
+        window.addEventListener('scroll', function() {
+            if (!isScrolling) {
+                window.requestAnimationFrame(function() {
+                    let nav = document.querySelector('.navbar');
+                    if (window.pageYOffset > 50) nav.classList.add('nav-scrolled');
+                    else nav.classList.remove('nav-scrolled');
+
+                    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    let scrolled = (winScroll / height) * 100;
+                    document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+                    // Parallax on Hero
+                    if (!isMobile) {
+                        let heroContent = document.querySelector('.hero-content');
+                        if (heroContent && winScroll < height * 0.5) {
+                            // Mueve el hero hacia abajo y lo desvanece
+                            heroContent.style.transform = `translateY(${winScroll * 0.4}px) translateZ(0)`;
+                            heroContent.style.opacity = 1 - (winScroll / 500);
+                        }
+                    }
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        });
+
+        // --- SCROLL VIDEO ---
+        const scrollVideo = document.getElementById('scrollVideo');
+        let currentScrollY = 0;
+        let targetTime = 0;
+        window.addEventListener('scroll', () => { currentScrollY = window.scrollY; });
+
+        function scrubVideo() {
+            if (scrollVideo.readyState >= 2) { 
+                let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                if(height > 0) {
+                    let scrollPercent = currentScrollY / height;
+                    targetTime = Math.min(scrollVideo.duration * scrollPercent, scrollVideo.duration - 0.05);
+                    let diff = targetTime - scrollVideo.currentTime;
+                    // Solo actualizar frames si hay un cambio real para no colapsar el CPU trabando la maquina
+                    if (Math.abs(diff) > 0.005) {
+                        scrollVideo.currentTime += diff * 0.15;
+                    }
+                }
+            }
+            requestAnimationFrame(scrubVideo);
+        }
+        requestAnimationFrame(scrubVideo);
+
+        // --- VANTA 3D NETWORK BACKGROUND ---
+        VANTA.NET({
+            el: "#heroSection",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: true,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xec672a,
+            backgroundColor: 0x050509,
+            backgroundAlpha: 0.0,
+            points: isMobile ? 8.00 : 15.00,
+            maxDistance: isMobile ? 18.00 : 20.00,
+            spacing: isMobile ? 25.00 : 15.00
+        });
+
+        // --- CUSTOM CURSOR (Desktop Only) ---
+        if (!isMobile) {
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            // Re-enable if hidden by default
+            cursorDot.style.display = 'block';
+            cursorOutline.style.display = 'block';
+            
+            window.addEventListener('mousemove', function(e) {
+                const posX = e.clientX;
+                const posY = e.clientY;
+                
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+                
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 150, fill: "forwards" });
+            });
+
+            const hoverables = document.querySelectorAll('a, button, .card-3d, .neon-card, .target-card, .holo-card');
+            hoverables.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorOutline.classList.add('hovered');
+                    cursorDot.classList.add('hovered');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursorOutline.classList.remove('hovered');
+                    cursorDot.classList.remove('hovered');
+                });
+            });
+        }
+
+        // --- ANIME.JS: ADVANCED CHOREOGRAPHY ---
+        
+        // 1. Hero Stagger Entrance & Isotipo Scale
+        document.querySelectorAll('.hero-badge, .hero-isotipo-wrapper, .hero-subtitle, .hero-content .btn').forEach(el => el.style.opacity = '0');
+
+        anime.timeline({ easing: 'easeOutExpo' })
+            .add({
+                targets: '.hero-badge, .hero-subtitle, .hero-content .btn',
+                translateY: [40, 0],
+                opacity: [0, 1],
+                delay: anime.stagger(150, {start: 600}),
+                duration: 1200
+            })
+            .add({
+                targets: '.hero-isotipo-wrapper',
+                translateY: [40, 0],
+                opacity: [0, 1],
+                duration: 1200,
+                complete: function() {
+                    // 2. Activamos la levitación por CSS una vez que JS termina su trabajo
+                    // Esto evita que Anime.js y CSS peleen por la propiedad 'transform'
+                    document.querySelector('.hero-isotipo-wrapper').classList.add('levitating');
+                }
+            }, '-=900');
+
+        // 3. Wandering Blobs (Fluid continuous background movement)
+        function animateBlobs() {
+            anime({
+                targets: '.glow-blob',
+                translateX: function() { return anime.random(-25, 25) + 'vw'; },
+                translateY: function() { return anime.random(-25, 25) + 'vh'; },
+                scale: function() { return anime.random(8, 12) / 10; },
+                easing: 'easeInOutSine',
+                duration: function() { return anime.random(6000, 12000); },
+                complete: animateBlobs
+            });
+        }
+        animateBlobs();
+
+        // 4. Subtle Breathing Effect on Icons (Palpitar)
+        anime({
+            targets: '.icon-visual i, .target-icon-wrap i, #impacto .fs-1 i',
+            scale: [0.9, 1.15],
+            direction: 'alternate',
+            loop: true,
+            easing: 'easeInOutSine',
+            duration: 1200,
+            delay: anime.stagger(200)
+        });
+    </script>
+</body>
+</html>
