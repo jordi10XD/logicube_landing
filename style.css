@@ -8,11 +8,7 @@
 }
 
 /* Reset y Bases */
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-body { font-family: 'Poppins', sans-serif; background: var(--black); cursor: auto; }
+body { font-family: 'Poppins', sans-serif; background: var(--black); overflow-x: hidden; cursor: auto; }
 @media (min-width: 768px) { body { cursor: none; } }
 h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 900; text-transform: uppercase; }
 
@@ -199,8 +195,17 @@ h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 90
 
 /* MOBILE RESPONSIVENESS TWEAKS */
 @media (max-width: 767px) {
+    .nav-scrolled {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(5, 5, 9, 0.98) !important;
+        padding: 10px 0 !important;
+    }
+
     .nav-brand-video {
         height: 60px;
+        max-width: 150px;
+        object-fit: contain;
         transform: scale(1.4) translateX(-15px);
     }
     
