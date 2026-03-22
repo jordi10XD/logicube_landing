@@ -8,7 +8,11 @@
 }
 
 /* Reset y Bases */
-body { font-family: 'Poppins', sans-serif; background: var(--black); overflow-x: hidden; cursor: auto; }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body { font-family: 'Poppins', sans-serif; background: var(--black); cursor: auto; }
 @media (min-width: 768px) { body { cursor: none; } }
 h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 900; text-transform: uppercase; }
 
@@ -46,6 +50,15 @@ h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 90
     }
 
 /* NAVBAR */
+.nav-brand-video {
+    height: 110px;
+    border-radius: 4px;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    transform: scale(1.1);
+    transform-origin: left center;
+}
+
 .glass-nav { 
     background: transparent; 
     border-bottom: 1px solid transparent;
@@ -186,6 +199,11 @@ h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 90
 
 /* MOBILE RESPONSIVENESS TWEAKS */
 @media (max-width: 767px) {
+    .nav-brand-video {
+        height: 60px;
+        transform: scale(1.4) translateX(-15px);
+    }
+    
     .hero-title { font-size: calc(2.0rem + 2vw); }
     .hero-isotipo { max-height: 140px; }
     .hero-subtitle { font-size: 1.1rem; font-weight: 500; }
