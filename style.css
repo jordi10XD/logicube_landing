@@ -8,7 +8,12 @@
 }
 
 /* Reset y Bases */
-body { font-family: 'Poppins', sans-serif; background: var(--black); overflow-x: hidden; cursor: auto; }
+html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+body { font-family: 'Poppins', sans-serif; background: var(--black); cursor: auto; }
 @media (min-width: 768px) { body { cursor: none; } }
 h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 900; text-transform: uppercase; }
 
@@ -209,6 +214,29 @@ h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 90
         object-fit: contain;
         transform: scale(1.4) translateX(-15px);
         mix-blend-mode: normal !important;
+    }
+    
+    /* Configurar desplegable del menú para que empiece desde el tope de la pantalla */
+    .navbar-collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(5, 5, 9, 0.98);
+        border-bottom: 1px solid rgba(236, 103, 42, 0.5);
+        z-index: -1;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    }
+    
+    .navbar-collapse .navbar-nav {
+        padding-top: 80px; 
+        padding-bottom: 20px;
+        align-items: center;
+    }
+    
+    .navbar-collapse .nav-link {
+        font-size: 1.25rem;
+        padding: 12px 0;
     }
     
     .hero-title { font-size: calc(2.0rem + 2vw); }
