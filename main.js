@@ -131,56 +131,7 @@ if (scrollVideo) {
 }
 
 // --- VANTA 3D NETWORK BACKGROUND ---
-function loadVantaDependencies() {
-    if (!document.getElementById('heroSection')) return;
-    
-    // Load Three.js
-    const threeScript = document.createElement('script');
-    threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
-    document.body.appendChild(threeScript);
-    
-    threeScript.onload = () => {
-        // Load Vanta Network
-        const vantaScript = document.createElement('script');
-        vantaScript.src = 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js';
-        document.body.appendChild(vantaScript);
-        
-        vantaScript.onload = initVanta;
-    };
-}
-
-function initVanta() {
-    if (typeof VANTA !== 'undefined' && document.getElementById('heroSection')) {
-        try {
-            VANTA.NET({
-                el: "#heroSection",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: true,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                color: 0xec672a,
-                backgroundColor: 0x050509,
-                backgroundAlpha: 0.0,
-                points: isMobile ? 8.00 : 15.00,
-                maxDistance: isMobile ? 18.00 : 20.00,
-                spacing: isMobile ? 25.00 : 15.00
-            });
-        } catch (e) {
-            console.error('Vanta initialization error:', e);
-        }
-    }
-}
-// Lazy-load Vanta/Three prioritizing user interaction
-window.addEventListener('DOMContentLoaded', () => {
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadVantaDependencies, { timeout: 2000 });
-    } else {
-        setTimeout(loadVantaDependencies, 500);
-    }
-});
+// Vanta and Three.js removed due to excessive CPU usage and True Blocking Time (TBT)
 
 // --- ANIME.JS: ADVANCED CHOREOGRAPHY ---
 window.addEventListener('DOMContentLoaded', () => {
