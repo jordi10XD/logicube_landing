@@ -77,8 +77,8 @@ h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 90
 .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(26, 41, 136, 0.4) 0%, rgba(5, 5, 9, 0.95) 90%); z-index: 1; pointer-events: none; }
 .hero-content { min-height: 450px; }
 .hero-title { font-size: calc(2.8rem + 3vw); text-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 10; line-height: 1.1; letter-spacing: -1px; }
-.hero-isotipo { max-height: 220px; filter: drop-shadow(0 0 40px rgba(236, 103, 42, 0.4)); transform: scale(1.4); pointer-events: none; }
-.hero-isotipo-wrapper { display: inline-block; pointer-events: none; min-height: 250px; }
+.hero-isotipo { max-height: 220px; width: auto; max-width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 0 40px rgba(236, 103, 42, 0.4)); transform: scale(1.4); pointer-events: none; }
+.hero-isotipo-wrapper { display: flex; align-items: center; justify-content: center; pointer-events: none; min-height: 250px; }
 .hero-subtitle { font-size: 1.3rem; font-weight: 500; max-width: 800px; margin: 0 auto; line-height: 1.6; color: #ffffff; text-shadow: 0 4px 25px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,0.9); letter-spacing: 0.5px; }
 
 .hero-badge {
@@ -299,7 +299,8 @@ h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 90
     }
     
     .hero-title { font-size: calc(2.0rem + 2vw); }
-    .hero-isotipo { max-height: 140px; }
+    .hero-isotipo { max-height: 140px; transform: scale(1.1); margin-top: 15px; }
+    .hero-isotipo-wrapper { min-height: 160px; }
     .hero-subtitle { font-size: 1.1rem; font-weight: 500; }
     .about-section, .philosophy-section, .bg-dark-section { padding: 90px 0; }
     .target-card, .holo-card, .neon-card { padding: 2rem !important; }
