@@ -131,6 +131,24 @@ if (scrollVideo) {
 }
 
 // --- VANTA 3D NETWORK BACKGROUND ---
+function loadVantaDependencies() {
+    if (!document.getElementById('heroSection')) return;
+    
+    // Load Three.js
+    const threeScript = document.createElement('script');
+    threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
+    document.body.appendChild(threeScript);
+    
+    threeScript.onload = () => {
+        // Load Vanta Network
+        const vantaScript = document.createElement('script');
+        vantaScript.src = 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js';
+        document.body.appendChild(vantaScript);
+        
+        vantaScript.onload = initVanta;
+    };
+}
+
 function initVanta() {
     if (typeof VANTA !== 'undefined' && document.getElementById('heroSection')) {
         try {
@@ -155,8 +173,14 @@ function initVanta() {
         }
     }
 }
-// Run init after a slight delay to ensure scripts are parsed
-window.addEventListener('DOMContentLoaded', initVanta);
+// Lazy-load Vanta/Three prioritizing user interaction
+window.addEventListener('DOMContentLoaded', () => {
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadVantaDependencies, { timeout: 2000 });
+    } else {
+        setTimeout(loadVantaDependencies, 500);
+    }
+});
 
 // --- ANIME.JS: ADVANCED CHOREOGRAPHY ---
 window.addEventListener('DOMContentLoaded', () => {

@@ -52,7 +52,9 @@ h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 90
 
 /* NAVBAR */
 .nav-brand-video {
-    height: 110px;
+    height: 45px;
+    width: auto;
+    max-width: 180px;
     border-radius: 4px;
     pointer-events: none;
     mix-blend-mode: screen;
@@ -73,9 +75,10 @@ h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 90
 /* HERO */
 .hero-portal { height: 100vh; position: relative; }
 .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(26, 41, 136, 0.4) 0%, rgba(5, 5, 9, 0.95) 90%); z-index: 1; pointer-events: none; }
+.hero-content { min-height: 450px; }
 .hero-title { font-size: calc(2.8rem + 3vw); text-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 10; line-height: 1.1; letter-spacing: -1px; }
 .hero-isotipo { max-height: 220px; filter: drop-shadow(0 0 40px rgba(236, 103, 42, 0.4)); transform: scale(1.4); pointer-events: none; }
-.hero-isotipo-wrapper { display: inline-block; pointer-events: none; }
+.hero-isotipo-wrapper { display: inline-block; pointer-events: none; min-height: 250px; }
 .hero-subtitle { font-size: 1.3rem; font-weight: 500; max-width: 800px; margin: 0 auto; line-height: 1.6; color: #ffffff; text-shadow: 0 4px 25px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,0.9); letter-spacing: 0.5px; }
 
 .hero-badge {
@@ -265,10 +268,10 @@ h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 90
     }
 
     .nav-brand-video {
-        height: 60px;
+        height: 40px;
         max-width: 150px;
         object-fit: contain;
-        transform: scale(1.4) translateX(-15px);
+        transform: scale(1.1) translateX(-5px);
         mix-blend-mode: normal !important;
     }
     
