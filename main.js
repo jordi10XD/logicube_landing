@@ -60,7 +60,11 @@ if (!isMobile) {
 
 // Inicializar AOS
 if (typeof AOS !== 'undefined') {
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ 
+        duration: 800, 
+        once: true,
+        disable: 'mobile' // Lighthouse recommendation against layout reflows
+    });
 }
 
 // --- PRELOADER ---
@@ -161,8 +165,9 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }, '-=900');
 
-    // 3. Wandering Blobs (Fluid continuous background movement)
+    // 3. Wandering Blobs (Fluid continuous background movement - Only Destkop)
     function animateBlobs() {
+        if (isMobile) return; // Prevent heavy reflows on mobile
         anime({
             targets: '.glow-blob',
             translateX: function () { return anime.random(-25, 25) + 'vw'; },
@@ -173,18 +178,20 @@ window.addEventListener('DOMContentLoaded', () => {
             complete: animateBlobs
         });
     }
-    animateBlobs();
+    if (!isMobile) animateBlobs();
 
-    // 4. Subtle Breathing Effect on Icons (Palpitar)
-    anime({
-        targets: '.icon-visual i, .target-icon-wrap i, #impacto .fs-1 i',
-        scale: [0.9, 1.15],
-        direction: 'alternate',
-        loop: true,
-        easing: 'easeInOutSine',
-        duration: 1200,
-        delay: anime.stagger(200)
-    });
+    // 4. Subtle Breathing Effect on Icons (Palpitar - Only Desktop)
+    if (!isMobile) {
+        anime({
+            targets: '.icon-visual i, .target-icon-wrap i, #impacto .fs-1 i',
+            scale: [0.9, 1.15],
+            direction: 'alternate',
+            loop: true,
+            easing: 'easeInOutSine',
+            duration: 1200,
+            delay: anime.stagger(200)
+        });
+    }
 });
 
 // --- CUSTOM JS MARQUEE FOR MANUAL + AUTO SCROLL ---
